@@ -1,0 +1,54 @@
+{
+  "name": "fastify-swagger-generate",
+  "version": "0.1.0",
+  "description": "Generate  a static Swagger/OpenAPI documentation for Fastify",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npm run unit -- --coverage-report=lcovonly",
+    "lint": "standard",
+    "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run coverage",
+    "test": "npm run coverage",
+    "test:dev": "npm run lint && npm run unit",
+    "typescript": "tsd",
+    "unit": "tap -J \"test/**/*.js\"",
+    "unit:report": "npm run unit -- --coverage-report=html",
+    "unit:verbose": "npm run unit -- -Rspec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manju4ever/fastify-swagger-generate.git"
+  },
+  "keywords": [
+    "fastify",
+    "swagger",
+    "openapi",
+    "generate",
+    "static",
+    "static spec"
+  ],
+  "author": "Manjunath Desappa - @manju4ever (http://github.com/manju4ever)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manju4ever/fastify-swagger-generate/issues"
+  },
+  "homepage": "https://github.com/fastify/fastify-swagger#readme",
+  "devDependencies": {
+    "qs": "^6.5.2",
+    "standard": "^16.0.1",
+    "tap": "^16.0.0"
+  },
+  "dependencies": {
+    "json-schema-resolver": "^1.3.0",
+    "openapi-types": "^10.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "static",
+      "tap-snapshots/*"
+    ]
+  },
+  "tsd": {
+    "directory": "test/types"
+  }
+}
