@@ -11,7 +11,7 @@
     "test": "npm run coverage",
     "test:dev": "npm run lint && npm run unit",
     "typescript": "tsd",
-    "unit": "tap -J \"test/**/*.js\"",
+    "unit": "tap -J \"__tests__/**/*.spec.js\"",
     "unit:report": "npm run unit -- --coverage-report=html",
     "unit:verbose": "npm run unit -- -Rspec"
   },
