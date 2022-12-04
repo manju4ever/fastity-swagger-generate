@@ -1,19 +1,13 @@
 {
   "name": "fastify-swagger-generate",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": "Generate Swagger/OpenAPI definition objects for fastify routes",
   "main": "index.js",
   "scripts": {
-    "coverage": "npm run unit -- --coverage-report=lcovonly",
-    "lint": "standard",
-    "lint:fix": "npm run lint -- --fix",
-    "prepublishOnly": "npm run coverage",
-    "test": "npm run coverage",
-    "test:dev": "npm run lint && npm run unit",
-    "typescript": "tsd",
-    "unit": "tap -J \"__tests__/**/*.spec.js\"",
-    "unit:report": "npm run unit -- --coverage-report=html",
-    "unit:verbose": "npm run unit -- -Rspec",
+    "lint": "standard --fix | snazzy",
+    "test": "tap --no-coverage __tests__/fsg.spec.js",
+    "test:ci": "npm run test",
+    "test:coverage": "npm test",
     "prerelease": "npm cit",
     "release": "HUSKY=0 standard-version",
     "postrelease": "npm run push && npm publish",
@@ -43,6 +37,7 @@
   "devDependencies": {
     "qs": "^6.5.2",
     "standard": "^16.0.1",
+    "standard-version": "^9.5.0",
     "tap": "^16.0.0"
   },
   "dependencies": {
