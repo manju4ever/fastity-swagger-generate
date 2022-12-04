@@ -4,6 +4,7 @@
   "description": "Generate Swagger/OpenAPI definition objects for fastify routes",
   "main": "index.js",
   "scripts": {
+    "doc": "markdown-toc -i README.md",
     "lint": "standard --fix | snazzy",
     "test": "tap --no-coverage __tests__/fsg.spec.js",
     "test:ci": "npm run test",
@@ -35,6 +36,7 @@
   },
   "homepage": "https://github.com/fastify/fastify-swagger#readme",
   "devDependencies": {
+    "markdown-toc": "^1.2.0",
     "qs": "^6.5.2",
     "standard": "^16.0.1",
     "standard-version": "^9.5.0",
