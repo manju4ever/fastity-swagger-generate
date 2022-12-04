@@ -8,8 +8,6 @@ Generate Swagger/OpenAPI definitions without running fastify app !
 
 ## Usage
 
----
-
 1. Create a `generate.js` file which looks like
 
 ```javascript
@@ -47,8 +45,6 @@ module.exports = routes; // should be an iterable routes
 ```
 
 ## API
-
----
 
 ### Options
 
