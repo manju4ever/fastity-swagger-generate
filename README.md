@@ -2,6 +2,14 @@
 
 Generate Swagger/OpenAPI definitions without running fastify app !
 
+<!-- toc -->
+
+## Install
+
+`npm i fastify-swag-generate`
+
+## Disclaimer
+
 - Only supports configuration based routes, i.e collection of route definitions
 - This library has no new content added
 - This library has just tweaked the original [fastify-swagger](https://github.com/fastify/fastify-swagger)
