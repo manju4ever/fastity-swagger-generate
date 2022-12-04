@@ -31,7 +31,7 @@ const getSampleRouteConfigs = () => [
 const getSampleRouteSwaggerDef = () => ({
   swagger: "2.0",
   info: {
-    version: "0.1.1-0",
+    version: require(__dirname + "/../../package.json").version,
     title: "fastify-swagger-generate",
   },
   definitions: {},
