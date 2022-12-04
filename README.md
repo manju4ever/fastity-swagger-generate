@@ -48,4 +48,4 @@ module.exports = routes; // should be an iterable routes
 
 ### Options
 
-[Refer here for more](https://github.com/fastify/fastify-swagger#options)
+[Refer here for more](https://github.com/fastify/fastify-swagger#register-options)

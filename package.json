@@ -13,7 +13,14 @@
     "typescript": "tsd",
     "unit": "tap -J \"__tests__/**/*.spec.js\"",
     "unit:report": "npm run unit -- --coverage-report=html",
-    "unit:verbose": "npm run unit -- -Rspec"
+    "unit:verbose": "npm run unit -- -Rspec",
+    "prerelease": "npm cit",
+    "release": "HUSKY=0 standard-version",
+    "postrelease": "npm run push && npm publish",
+    "prenext": "npm cit",
+    "next": "HUSKY=0 standard-version --prerelease",
+    "postnext": "npm run push && npm publish --tag next",
+    "push": "git push origin --follow-tags `git rev-parse --abbrev-ref HEAD`"
   },
   "repository": {
     "type": "git",
