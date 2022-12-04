@@ -4,6 +4,15 @@ Generate Swagger/OpenAPI definitions without running fastify app !
 
 <!-- toc -->
 
+- [fastify-swag-generate](#fastify-swag-generate)
+  - [Install](#install)
+  - [Disclaimer](#disclaimer)
+  - [Usage](#usage)
+  - [API](#api)
+    - [Options](#options)
+
+<!-- tocstop -->
+
 ## Install
 
 `npm i fastify-swag-generate`
