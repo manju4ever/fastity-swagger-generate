@@ -1,7 +1,7 @@
 {
   "name": "fastify-swagger-generate",
   "version": "0.1.0",
-  "description": "Generate  a static Swagger/OpenAPI documentation for Fastify",
+  "description": "Generate Swagger/OpenAPI definition objects for fastify routes",
   "main": "index.js",
   "scripts": {
     "coverage": "npm run unit -- --coverage-report=lcovonly",

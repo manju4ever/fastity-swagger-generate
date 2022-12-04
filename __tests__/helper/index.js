@@ -1,85 +1,85 @@
 const getSampleRouteConfigs = () => [
   {
-    method: "GET",
-    url: "/user/{userId}",
+    method: 'GET',
+    url: '/user/{userId}',
     schema: {
       params: {
-        type: "object",
+        type: 'object',
         properties: {
-          userId: { type: "string" },
-        },
-      },
+          userId: { type: 'string' }
+        }
+      }
     },
-    handler: () => {},
+    handler: () => {}
   },
   {
-    method: "POST",
-    url: "/users",
+    method: 'POST',
+    url: '/users',
     schema: {
       body: {
-        type: "object",
+        type: 'object',
         properties: {
-          firstName: { type: "string" },
-          lastName: { type: "string" },
-        },
-      },
+          firstName: { type: 'string' },
+          lastName: { type: 'string' }
+        }
+      }
     },
-    handler: () => {},
-  },
-];
+    handler: () => {}
+  }
+]
 
-getSampleRouteSwaggerDef = () => ({
-  swagger: "2.0",
+const getSampleRouteSwaggerDef = () => ({
+  swagger: '2.0',
   info: {
-    version: "0.1.0",
-    title: "fastify-swagger-generate",
+    version: '0.1.0',
+    title: 'fastify-swagger-generate'
   },
   definitions: {},
   paths: {
-    "/user/{userId}": {
+    '/user/{userId}': {
       get: {
         parameters: [
           {
-            type: "string",
+            type: 'string',
             required: true,
-            in: "path",
-            name: "userId",
-          },
+            in: 'path',
+            name: 'userId'
+          }
         ],
         responses: {
           200: {
-            description: "Default Response",
-          },
-        },
-      },
+            description: 'Default Response'
+          }
+        }
+      }
     },
-    "/users": {
+    '/users': {
       post: {
         parameters: [
           {
-            name: "body",
-            in: "body",
+            name: 'body',
+            in: 'body',
             schema: {
-              type: "object",
+              type: 'object',
               properties: {
                 firstName: {
-                  type: "string",
+                  type: 'string'
                 },
                 lastName: {
-                  type: "string",
-                },
-              },
-            },
-          },
+                  type: 'string'
+                }
+              }
+            }
+          }
         ],
         responses: {
           200: {
-            description: "Default Response",
-          },
-        },
-      },
-    },
-  },
-});
+            description: 'Default Response'
+          }
+        }
+      }
+    }
+  }
+})
 
-module.exports = { getSampleRouteConfigs, getSampleRouteSwaggerDef };
+module.exports = { getSampleRouteConfigs, getSampleRouteSwaggerDef }
