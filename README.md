@@ -1,10 +1,10 @@
-# fastify-swag-generate
+# fastify-swagger-generate
 
 Generate Swagger/OpenAPI definitions without running fastify app !
 
 <!-- toc -->
 
-- [fastify-swag-generate](#fastify-swag-generate)
+- [fastify-swagger-generate](#fastify-swagger-generate)
   - [Install](#install)
   - [Disclaimer](#disclaimer)
   - [Usage](#usage)
@@ -15,7 +15,7 @@ Generate Swagger/OpenAPI definitions without running fastify app !
 
 ## Install
 
-`npm i fastify-swag-generate`
+`npm i fastify-swagger-generate`
 
 ## Disclaimer
 
@@ -28,13 +28,14 @@ Generate Swagger/OpenAPI definitions without running fastify app !
 1. Create a `generate.js` file which looks like
 
 ```javascript
-const fastifySwagGen = require("fastify-swag-gen");
+const fastifySwagGen = require("fastify-swagger-generate");
 const Routes = require("./routes");
 const opts = {};
 
 // generate swagger definitions
 fastifySwagGen(opts, Routes, (err, definitions) => {
-  console.log(JSON.stringify(definitions)); // Voila...
+  // Write to a file
+  require("fs").createWriteStream("./app.swag.json");
 });
 ```
 
