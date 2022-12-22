@@ -1,4 +1,4 @@
-const getSampleRouteConfigs = () => [
+const getSampleRoutesConfig = () => [
   {
     method: "GET",
     url: "/user/{userId}",
@@ -27,8 +27,7 @@ const getSampleRouteConfigs = () => [
     handler: () => {},
   },
 ];
-
-const getSampleRouteSwaggerDef = () => ({
+const getSampleRoutesSwaggerDef = () => ({
   swagger: "2.0",
   info: {
     version: require(__dirname + "/../../package.json").version,
@@ -82,4 +81,42 @@ const getSampleRouteSwaggerDef = () => ({
   },
 });
 
-module.exports = { getSampleRouteConfigs, getSampleRouteSwaggerDef };
+const getSingleRouteConfig = () => ({
+  method: "GET",
+  url: "/user/{userId}",
+  schema: {
+    params: {
+      type: "object",
+      properties: {
+        userId: { type: "string" },
+      },
+    },
+  },
+  handler: () => {},
+});
+
+const getSingleRouteSwaggerDef = () => ({
+  swagger: "2.0",
+  info: {
+    version: require(__dirname + "/../../package.json").version,
+    title: "fastify-swagger-generate",
+  },
+  definitions: {},
+  paths: {
+    "/user/{userId}": {
+      get: {
+        parameters: [
+          { type: "string", required: true, in: "path", name: "userId" },
+        ],
+        responses: { 200: { description: "Default Response" } },
+      },
+    },
+  },
+});
+
+module.exports = {
+  getSampleRoutesConfig,
+  getSampleRoutesSwaggerDef,
+  getSingleRouteConfig,
+  getSingleRouteSwaggerDef,
+};

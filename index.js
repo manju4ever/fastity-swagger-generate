@@ -5,6 +5,7 @@ const JSF = require("json-schema-resolver");
 const { resolveSwaggerFunction } = require("./lib/util/common");
 
 function fastifySwaggerGenerate(opts, routes, done) {
+  let _routes = routes instanceof Array ? routes : [routes];
   const Ref = () =>
     new JSF(
       Object.assign(
@@ -24,7 +25,7 @@ function fastifySwaggerGenerate(opts, routes, done) {
       )
     );
 
-  return resolveSwaggerFunction(opts, routes, Ref, done);
+  return resolveSwaggerFunction(opts, _routes, Ref, done);
 }
 
 module.exports = fastifySwaggerGenerate;

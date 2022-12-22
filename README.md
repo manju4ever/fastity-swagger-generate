@@ -35,7 +35,9 @@ const opts = {};
 // generate swagger definitions
 fastifySwagGen(opts, Routes, (err, definitions) => {
   // Write to a file
-  require("fs").createWriteStream("./app.swag.json");
+  require("fs")
+    .createWriteStream("./app.swag.json")
+    .write(JSON.stringify(definitions));
 });
 ```
 
